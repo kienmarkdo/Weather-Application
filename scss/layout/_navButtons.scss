@@ -1,0 +1,7 @@
+.navButtons {
+    flex-grow: 1; // in the middle because set to flex grow
+    @include flexCenter; // mixin
+    // moves all the nav buttons from the top left of the screen to the middle of the screen; spaced evenly
+    justify-content: space-evenly;
+    padding: 0.5rem 0.25rem;
+}

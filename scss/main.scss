@@ -1,8 +1,18 @@
 // SCSS/SASS allows nesting
 
+// abstracts
 @import "abstracts/colors"; // pre-defined colors to be used later-on
 @import "abstracts/mixins"; // pre-defined screen sizes
+
+// base style
 @import "base/base"; // base color (without this, the entire background would be plain white)
+
+// components
 @import "components/a11y"; // hides accessibilities
 @import "components/buttons"; // makes the buttons round
-@import "layout/searchBar"; // layout for the search bar
+
+// layout
+@import "layout/searchBar"; 
+@import "layout/navButtons";
+@import "layout.currentForecast";
+@import "layout/dailyForecast";
