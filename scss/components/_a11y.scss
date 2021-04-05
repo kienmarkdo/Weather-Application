@@ -1,0 +1,26 @@
+// _a11y.scss is an abbrieviation for a "accessibility"
+
+// takes item (where offscreen is applied) off the screen but not out of the page (still screen reader-readable)
+.offscreen {
+    position: absolute;
+    left: -10000px;
+}
+
+.skip-link {
+    position: absolute;
+    top: -999px;
+    left: 0;
+    background: $text-shadow-color;
+    padding: 14px;
+    z-index: 1;
+    color: $font-color;
+}
+
+// pseudo definitions
+
+// help make skip link appear when needed
+.skip-link:focus,
+.skip-link:active {
+    top: auto;
+    left: auto;
+}

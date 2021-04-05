@@ -16,17 +16,17 @@
     <!-- Main container -->
     <main>
         <!-- Searchbar section -->
-        <h1>Responsive Weather App Powered by the Open Weather A P I</h1> <!-- For the screen reader -->
+        <h1 class="offscreen">Responsive Weather App Powered by the Open Weather A P I</h1> <!-- For the screen reader -->
         <section id="searchBar" class="searchBar">
             <form id="searchBar__form" class="searchBar__form" role="search">
-                <label for="searchBar__text">Enter a new location</label>
+                <label for="searchBar__text" class="offscreen">Enter a new location</label>
                 <input id="searchBar__text" class="searchBar__text" type="text" role="searchbox" size="40" autocomplete="off"
                 placeholder="City, Province, Country">
-                <button id="searchBar__button" class="searchBar__button" title="Submit Location" 
+                <button id="searchBar__button" class="searchBar__button button" title="Submit Location" 
                 aria-label="Enter ZIP code or City, Province and Country to retrieve weather forecast">
                     <!-- Search icon and animated Sync icon from fontawesome.com -->
                     <i class="fa fa-search"></i>
-                    <i class="fas fa-sync fa-spin"></i>
+                    <i class="fas fa-sync fa-spin none"></i>
                 </button>
             </form>
         </section>
@@ -74,7 +74,7 @@
         <hr>
         <!-- Daily forecast section -->
         <section id="dailyForecast" class="dailyForecast" role="region" aria-labelledby="dailyForecast__title">
-            <h2 id="dailyForecast__title" class="dailyForecast__title">Six Day Forecast</h2>
+            <h2 id="dailyForecast__title" class="dailyForecast__title offscreen">Six Day Forecast</h2>
             <div id="dailyForecast__contents" class="dailyForecast__contents"></div>
         </section>
         <!-- Make announcements to the screen reader immediately; populated dynamically -->

@@ -1,3 +1,5 @@
-@import "abstracts/colors";
-@import "abstracts/mixins";
-@import "base/base";
+@import "abstracts/colors"; // pre-defined colors to be used later-on
+@import "abstracts/mixins"; // pre-defined screen sizes
+@import "base/base"; // base color (without this, the entire background would be plain white)
+@import "components/a11y"; // hides accessibilities
+@import "components/buttons"; // makes the buttons round
