@@ -1,0 +1,50 @@
+.searchBar {
+    padding: 0.5rem 0.5rem 1.5rem;
+
+    .searchBar__form {
+        display:flex;
+        justify-content: space-between;
+        border: 2px solid $bordercolor; // border around search bar
+        border-radius: 500px;
+
+        .searchBar__text {
+            flex-grow: 1;
+            border: none;
+            margin-right: 0.25rem;
+            background-color: $button-color; // sets the searchbar TEXT background to the same colour as the searchbar FORM
+            color: $font-color;
+            width: calc(100% - 52px);
+            font-size: 1.25rem;
+            padding: 0.75rem 0.75rem 0.75rem;
+            outline: none;
+        } // end of searchBar__text
+
+        .searchBar__text::placeholder {
+            color: $fadecolor; // change the colour of City, Province, Country
+        } // end of searchBar::placeholder
+
+        // removes the round border around the search icon in the search bar
+        .searchBar__button {
+            border: none;
+
+            i {
+                font-size: 1.7rem; // adjust size of the search (magnifying glass) icon
+            }
+        } // end of searchbar__button
+
+        .searchBar__button:hover,
+        .searchBar__button:focus {
+            border: none;
+            box-shadow: none;
+            text-shadow: 4px 2px 5px $text-shadow-color;
+        } // end of searchBar__button:focus
+
+
+        .searchBar__form:focus-within,
+        .searchBar__form:hover {
+            box-shadow: 4px 2px 5px $text-shadow-color;
+        } // end of searchBar__form:hover
+
+
+    } // end of searchBar__form
+} // end of searchBar
