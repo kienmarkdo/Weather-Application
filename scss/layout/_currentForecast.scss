@@ -1,0 +1,27 @@
+.currentForecast {
+    .currentForecast__location {
+        font-size: 1rem;
+        font-weight: normal;
+        text-align: center;
+        margin-bottom: 1rem;
+        @include mq(768px) {
+            font-size: 1.3rem;
+        }
+    }
+
+    .currentForecast__conditions {
+        width: 100%;
+        font-size: 1.1rem;
+        margin: auto auto 2rem;
+        display: grid;
+        @include mq(375) {
+            font-size: 1.3rem;
+        }
+        @include mq(400px) {
+            font-size: 1.7rem;
+        }
+    }
+
+
+
+} // end of class
