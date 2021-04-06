@@ -7,6 +7,13 @@
 
 html {
     background-color: $background-color;
+
+    // background images depending on the weather
+    background-image: url("../img/rain.jpg"); // from CSS Folder, go back, then go to images
+    background-size: cover; // fits the image into the screen
+    //background-blend-mode: overlay; // puts the semi-transparent background on top of the background image
+
+    // html font and colour
     font-size: 16px;
     font-family: "Montserrat", sans-serif; // google fonts
     font-weight: bold;
