@@ -3,7 +3,7 @@ export default class CurrentLocation {
     constructor() {
         this._name = "Current Location";
         this._lat = null; // latitude
-        this._long = null; // longitude
+        this._lon = null; // longitude
         this._unit = "metric";
     } // end of constructor
 
@@ -24,7 +24,7 @@ export default class CurrentLocation {
     }
 
     getLongitude() {
-        return this._long;
+        return this._lon;
     }
 
     getUnit() {
@@ -42,8 +42,8 @@ export default class CurrentLocation {
         this._lat = lat;
     }
 
-    setLongitude(long) {
-        this._long = long;
+    setLongitude(lon) {
+        this._lon = lon;
     }
 
     setUnit(unit) {
