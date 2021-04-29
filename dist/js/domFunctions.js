@@ -23,5 +23,5 @@ const updateWeatherLocationHeader = (message) => {
 
 
 export const updateScreenReaderConfirmation = (message) => {
-    document,getElementById("confirmation").textContent = message;
+    document.getElementById("confirmation").textContent = message;
 }

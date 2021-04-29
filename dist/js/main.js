@@ -21,7 +21,7 @@ const initApp = () => {
     const homeButton = document.getElementById("home");
     homeButton.addEventListener("click", loadWeather);
     const saveButton = document.getElementById("saveLocation");
-    saveButton.addEventListener("click", savedLocation);
+    saveButton.addEventListener("click", saveLocation);
     // set up
 
 
@@ -72,17 +72,23 @@ const geoSuccess = (position) => {
 
 const loadWeather = (event) => {
     const savedLocation = getHomeLocation();
+    // error trap for default app load
     if (!savedLocation && !event) {
         return getGeoWeather();
     }
+    // error trap for click without home location saved
     if (!savedLocation && event.type === "click") {
         displayError(
             "No Home Location Saved.",
             "Sorry. Please save your home location first."
-        )
-    } else if (savedLocation && !event) {
+        );
+    } 
+    // no click but there is a saved location
+    else if (savedLocation && !event) {
         displayHomeLocationWeather(savedLocation);
-    } else {
+    } 
+    // click event and there is a saved location
+    else {
         const homeIcon = document.querySelector(".fa-home");
         addSpinner(homeIcon);
         displayHomeLocationWeather(savedLocation);
