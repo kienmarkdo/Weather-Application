@@ -9,7 +9,16 @@ export default class CurrentLocation {
 
 
     toggleUnit() {
-        this._unit = this._unit === "metric" ? "imperial" : "metric";
+        // this._unit = this._unit === "metric" ? "imperial" : "metric";
+        if (this._unit === "metric") {
+            this._unit = "imperial";
+        }
+        else if (this._unit === "imperial") {
+            this._unit = "metric"
+        }
+        else {
+            console.log("UNIT ERROR");
+        }
     }
 
 
@@ -19,11 +28,11 @@ export default class CurrentLocation {
         return this._name;
     }
 
-    getLatitude() {
+    getLat() {
         return this._lat;
     }
 
-    getLongitude() {
+    getLon() {
         return this._lon;
     }
 
@@ -38,11 +47,11 @@ export default class CurrentLocation {
         this._name = name;
     }
 
-    setLatitude(lat) {
+    setLat(lat) {
         this._lat = lat;
     }
 
-    setLongitude(lon) {
+    setLon(lon) {
         this._lon = lon;
     }
 
