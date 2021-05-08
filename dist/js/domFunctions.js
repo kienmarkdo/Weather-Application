@@ -1,5 +1,3 @@
-import { getWeatherFromCoords } from "./dataFunctions";
-
 export const setPlaceholderText = () => {
     const input = document.getElementById("searchBar__text");
     window.innerWidth < 400 ? (input.placeholder = "City, Province, Country") : (input.placeholder = "City, Province, Country, or Zip Code");
