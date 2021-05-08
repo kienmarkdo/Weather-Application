@@ -128,17 +128,15 @@ const getWeatherClass = (icon) => {
 
 const setBGImage = (weatherClass) => {
     document.documentElement.classList.add(weatherClass); // HTML element
-    document.documentElement.classList.forEach(img => {
-        if (img !== weatherClass) {
-            document.documentElement.classList.remove(img);
-        }
+    document.documentElement.classList.forEach((img) => {
+        if (img !== weatherClass) document.documentElement.classList.remove(img);
     });
-}
+};
 
 
 const buildScreenReaderWeather = (weatherJson, locationObj) => {
     const location = locationObj.getName();
-    const unit = location.getUnit();
+    const unit = locationObj.getUnit();
     const tempUnit = unit === "imperial" ? "F" : "C";
 
     // for the screen reader to read
@@ -288,7 +286,7 @@ const translateIconToFontAwesome = (icon) => {
 
 const displayCurrentConditions = (currentConditionsArray) => {
     const ccContainer = document.getElementById("currentForecast__conditions");
-    currentConditionsArray.forEach(cc => {
+    currentConditionsArray.forEach((cc) => {
         ccContainer.appendChild(cc);
     });
 }
