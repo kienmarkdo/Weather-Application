@@ -11,7 +11,8 @@ import {
     addSpinner,
     displayError,
     displayApiError,
-    updateScreenReaderConfirmation
+    updateScreenReaderConfirmation,
+    updateDisplay
 } from "./domFunctions.js"
 
 
