@@ -26,11 +26,14 @@ The page is split into four sections.
 <p float="left">
   <img src="https://github.com/kienmarkdo/Weather-Application/blob/master/demoImages/weatherAppDemoHomePage.PNG" width="300" height="570">
   <img src="https://github.com/kienmarkdo/Weather-Application/blob/master/demoImages/demoDay.png" width="300" height="570">
-  <img src="https://github.com/kienmarkdo/Weather-Application/blob/master/demoImages/demoNight.png" width="300" height="570">
 </p>
 
 <p float="left">
+  <img src="https://github.com/kienmarkdo/Weather-Application/blob/master/demoImages/demoNight.png" width="300" height="570">
   <img src="https://github.com/kienmarkdo/Weather-Application/blob/master/demoImages/demoRain.png" width="300" height="570">
+</p>
+
+<p float="left">
   <img src="https://github.com/kienmarkdo/Weather-Application/blob/master/demoImages/demoSnow.png" width="300" height="570">
   <img src="https://github.com/kienmarkdo/Weather-Application/blob/master/demoImages/demoFog.png" width="300" height="570">
 </p>
