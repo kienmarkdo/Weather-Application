@@ -4,7 +4,7 @@ import {
     getWeatherFromCoords,
     getCoordsFromApi,
     cleanText
-} from "./dataFunctions.js"
+} from "./dataFunctions.js";
 
 import {
     setPlaceholderText,
@@ -13,7 +13,7 @@ import {
     displayApiError,
     updateScreenReaderConfirmation,
     updateDisplay
-} from "./domFunctions.js"
+} from "./domFunctions.js";
 
 
 
@@ -49,19 +49,17 @@ const initApp = () => {
 
     // load weather
     loadWeather();
-    
+
 } // end of initApp function
 
 document.addEventListener("DOMContentLoaded", initApp);
 
 
 const getGeoWeather = (event) => {
-    if (event) {
-        if (event.type === "click") {
-            // spinner
-            const mapIcon = document.querySelector(".fa-map-marker-alt");
-            addSpinner(mapIcon);
-        }
+    if (event && event.type === "click") {
+        // spinner
+        const mapIcon = document.querySelector(".fa-map-marker-alt");
+        addSpinner(mapIcon);
     } // end of if (event)
 
     // if no geo location
@@ -104,11 +102,11 @@ const loadWeather = (event) => {
             "No Home Location Saved.",
             "Sorry. Please save your home location first."
         );
-    } 
+    }
     // no click but there is a saved location
     else if (savedLocation && !event) {
         displayHomeLocationWeather(savedLocation);
-    } 
+    }
     // click event and there is a saved location
     else {
         const homeIcon = document.querySelector(".fa-home");
@@ -132,7 +130,7 @@ const displayHomeLocationWeather = (home) => {
 }
 
 const saveLocation = () => {
-    
+
     if (currentLoc.getLat() && currentLoc.getLon()) {
         const saveIcon = document.querySelector(".fa-save");
         addSpinner(saveIcon);
@@ -169,14 +167,14 @@ const submitNewLocation = async (event) => {
 
     const text = document.getElementById("searchBar__text").value;
     const entryText = cleanText(text);
-    
+
     if (!entryText.length) {
         return;
     }
 
     const locationIcon = document.querySelector(".fa-search");
     addSpinner(locationIcon);
-    
+
     const coordsData = await getCoordsFromApi(entryText, currentLoc.getUnit());
     // if coordsData exists
     if (coordsData) {
@@ -201,10 +199,10 @@ const submitNewLocation = async (event) => {
 
 
 const updateDataAndDisplay = async (locationObj) => {
-    
+
     const weatherJson = await getWeatherFromCoords(locationObj);
-    console.log(weatherJson);
-    // if (weatherJson) {
-    //     updateDisplay(weatherJson, locationObj);
-    // }
+    // console.log(weatherJson);
+    if (weatherJson) {
+        updateDisplay(weatherJson, locationObj);
+    }
 }

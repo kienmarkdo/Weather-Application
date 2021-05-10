@@ -42,7 +42,7 @@ const updateWeatherLocationHeader = (message) => {
     // if Lat: and Long: exist in the message; else they do not exist
     if (message.indexOf("Lat:" !== -1) && message.indexOf("Long:") !== -1) {
         const msgArray = message.split(" ");
-        const mapArray = msgArray.map(msg => {
+        const mapArray = msgArray.map((msg) => {
             return msg.replace(":", ": "); // replaces ":" with ": " in  Lat: and Long:
         });
 
@@ -54,7 +54,7 @@ const updateWeatherLocationHeader = (message) => {
     } else {
         h1.textContent = message;
     }
-    h1.textContent = message;
+    
 }
 
 
@@ -326,7 +326,7 @@ const createDailyForecastDivs = (dayWeather) => {
 }
 
 
-const getDayAbbreviation = (data) => {
+const getDayAbbreviation = (date) => {
     const dateObj = new Date(date * 1000);
     const utcString = dateObj.toUTCString();
 
