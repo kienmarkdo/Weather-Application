@@ -4,6 +4,10 @@ First web development project using basic HTML, SCSS and JavaScript. Uses the Op
 
 ## Overview
 
+### Link to the app
+
+https://kienmarkdo.github.io/Weather-Application/
+
 ### Description
 
 The page is split into four sections.
