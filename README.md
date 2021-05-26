@@ -24,7 +24,7 @@ The page is split into four sections.
 
 
 
-### Demo Screenshots
+## Demo Screenshots
 
 <!--![Weather app home page demo](https://github.com/kienmarkdo/Weather-Application/blob/master/demoImages/weatherAppDemoHomePage.PNG)-->
 <p float="left">
