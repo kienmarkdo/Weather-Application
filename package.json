@@ -1,0 +1,23 @@
+{
+  "name": "Weather-Application",
+  "version": "1.0.0",
+  "description": "First web development project using HTML, CSS, SCSS and JavaScript. Uses the Open Weather Map API to retrieve weather data and displays a mobile-first responsive design. Features accessibility considerations, the geolocation API, persistent storage, Fetch API with async/await.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kienmarkdo/Weather-Application.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kienmarkdo/Weather-Application/issues"
+  },
+  "homepage": "https://github.com/kienmarkdo/Weather-Application#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
+}

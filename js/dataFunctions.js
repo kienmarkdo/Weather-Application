@@ -15,14 +15,33 @@ export const getHomeLocation = () => {
 }
 
 export const getWeatherFromCoords = async (locationObj) => {
-    const lat = locationObj.getLat();
-    const lon = locationObj.getLon();
-    const units = locationObj.getUnit();
-    const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&units=${units}&appid=${WEATHER_API_KEY}`;
+    // // code before serverless functions
+    // const lat = locationObj.getLat();
+    // const lon = locationObj.getLon();
+    // const units = locationObj.getUnit();
+    // const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&units=${units}&appid=${WEATHER_API_KEY}`;
+
+    // try {
+    //     const weatherStream = await fetch(url);
+    //     const weatherJson = await weatherStream.json();
+    //     return weatherJson;
+    // } catch (err) {
+    //     console.log(err);
+    // }
+
+    // code after serverless functions
+
+    const urlDataObj = {
+        lat: locationObj.getLat(),
+        lon: locationObj.getLon(),
+        units: locationObj.getUnit()
+    };
 
     try {
-        const weatherStream = await fetch(url);
-        const weatherJson = await weatherStream.json();
+        const weatherStream = await fetch("./netlify/functions/get_weather", {
+            method: "POST", // post request instead of get request
+            body: JSON.stringify(urlDataObj)
+        });
         return weatherJson;
     } catch (err) {
         console.log(err);
