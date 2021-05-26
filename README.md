@@ -6,7 +6,7 @@ First web development project using HTML, CSS, SCSS and JavaScript. Uses the Ope
 
 ### Link to the app
 
-https://kienmarkdo.github.io/Weather-Application/
+https://wizardly-booth-834a82.netlify.app/
 
 ### Description
 
