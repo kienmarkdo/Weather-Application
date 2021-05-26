@@ -1,6 +1,6 @@
 # Weather Application
 
-First web development project using HTML, CSS, SCSS and JavaScript. Uses the Open Weather Map API to retrieve weather data and displays a mobile-first responsive design. Features accessibility considerations, the geolocation API, persistent storage, Fetch API with async/await.
+First web development project following a tutorial using HTML, CSS, SCSS and JavaScript. Uses the Open Weather Map API to retrieve weather data and displays a mobile-first responsive design. Features accessibility considerations, the geolocation API, persistent storage, Fetch API with async/await and serverless functions.
 
 ## Overview
 
