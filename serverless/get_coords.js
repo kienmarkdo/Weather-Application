@@ -20,7 +20,7 @@ exports.handler = async (event, context) => {
         return {
             statusCode: 200,
             body: JSON.stringify(jsonData)
-        }
+        };
     } catch (err) {
         return { statusCode: 422, body: err.stack};
     }
