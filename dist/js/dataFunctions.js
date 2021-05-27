@@ -38,13 +38,13 @@ export const getWeatherFromCoords = async (locationObj) => {
     };
 
     try {
-        const weatherStream = await fetch("./netlify/functions/get_weather", {
+        const weatherStream = await fetch("./.netlify/functions/get_weather", {
             method: "POST", // post request instead of get request
             body: JSON.stringify(urlDataObj)
         });
         return weatherJson;
     } catch (err) {
-        console.log(err);
+        console.error(err);
     }
 
 }
