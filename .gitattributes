@@ -1,1 +1,4 @@
-dist/** linguist-documentation=false
+dist/* linguist-documentation=false
+dist/css/* linguist-documentation=false
+dist/js/* linguist-documentation=false
+
